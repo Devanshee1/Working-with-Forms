@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8">
+    <!-- Sets the viewport to make the site responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the document shown on the browser tab -->
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form with an email input field and submit button -->
+    <form action="" onsubmit="funsubmit()">
+        <!-- Label for the email input field -->
+        Enter email address please: 
+        <!-- Email input field with focus, blur, and select event handlers -->
+        <input type="email" id="input" onfocus="onfun()" onblur="offfun()" onselect="selectfun()" required>
+        <!-- Submit button to trigger the form submission -->
+        <input type="submit">
+    </form>
+
+    <!-- JavaScript section to define functions for event handling -->
+    <script>
+        // Get a reference to the input field using its ID
+        let input = document.getElementById("input");
+
+        // Function to change background color to red when input is focused
+        function onfun(){
+            input.style.backgroundColor = "red";
+        }
+
+        // Function to change background color to yellow when input loses focus
+        function offfun(){
+            input.style.backgroundColor = "yellow";
+        }
+
+        // Function to display an alert with the entered email when form is submitted
+        function funsubmit(){
+            alert(`${input.value}`);
+        }
+
+        // Function to display an alert when text in the input field is selected
+        function selectfun(){
+            alert("you selected something");
+        }
+    </script>
+</body>
+</html>
